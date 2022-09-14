@@ -33,6 +33,8 @@ func NewMsgTransfer(
 	}
 }
 
+func (MsgTransfer) IsPrivacy() bool { return false }
+
 // Route implements sdk.Msg
 func (MsgTransfer) Route() string {
 	return RouterKey

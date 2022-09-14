@@ -29,6 +29,11 @@ var (
 	_ codectypes.UnpackInterfacesMessage = MsgUpgradeClient{}
 )
 
+func (msg MsgCreateClient) IsPrivacy() bool       { return false }
+func (msg MsgUpdateClient) IsPrivacy() bool       { return false }
+func (msg MsgSubmitMisbehaviour) IsPrivacy() bool { return false }
+func (msg MsgUpgradeClient) IsPrivacy() bool      { return false }
+
 // NewMsgCreateClient creates a new MsgCreateClient instance
 //nolint:interfacer
 func NewMsgCreateClient(

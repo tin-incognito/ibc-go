@@ -21,6 +21,11 @@ var (
 	_ codectypes.UnpackInterfacesMessage = MsgConnectionOpenAck{}
 )
 
+func (msg MsgConnectionOpenInit) IsPrivacy() bool    { return false }
+func (msg MsgConnectionOpenConfirm) IsPrivacy() bool { return false }
+func (msg MsgConnectionOpenAck) IsPrivacy() bool     { return false }
+func (msg MsgConnectionOpenTry) IsPrivacy() bool     { return false }
+
 // NewMsgConnectionOpenInit creates a new MsgConnectionOpenInit instance. It sets the
 // counterparty connection identifier to be empty.
 //nolint:interfacer

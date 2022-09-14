@@ -119,3 +119,5 @@ require (
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 	nhooyr.io/websocket v1.8.6 // indirect
 )
+
+replace github.com/cosmos/cosmos-sdk => /Users/tin/go/src/github.com/tin-incognito/cosmos-sdk

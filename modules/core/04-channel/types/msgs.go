@@ -13,6 +13,8 @@ import (
 
 var _ sdk.Msg = &MsgChannelOpenInit{}
 
+func (msg MsgChannelOpenInit) IsPrivacy() bool { return false }
+
 // NewMsgChannelOpenInit creates a new MsgChannelOpenInit. It sets the counterparty channel
 // identifier to be empty.
 // nolint:interfacer
@@ -60,6 +62,8 @@ func (msg MsgChannelOpenInit) GetSigners() []sdk.AccAddress {
 }
 
 var _ sdk.Msg = &MsgChannelOpenTry{}
+
+func (msg MsgChannelOpenTry) IsPrivacy() bool { return false }
 
 // NewMsgChannelOpenTry creates a new MsgChannelOpenTry instance
 // The version string is deprecated and will be ignored by core IBC.
@@ -128,6 +132,8 @@ func (msg MsgChannelOpenTry) GetSigners() []sdk.AccAddress {
 
 var _ sdk.Msg = &MsgChannelOpenAck{}
 
+func (msg MsgChannelOpenAck) IsPrivacy() bool { return false }
+
 // NewMsgChannelOpenAck creates a new MsgChannelOpenAck instance
 // nolint:interfacer
 func NewMsgChannelOpenAck(
@@ -180,6 +186,8 @@ func (msg MsgChannelOpenAck) GetSigners() []sdk.AccAddress {
 
 var _ sdk.Msg = &MsgChannelOpenConfirm{}
 
+func (msg MsgChannelOpenConfirm) IsPrivacy() bool { return false }
+
 // NewMsgChannelOpenConfirm creates a new MsgChannelOpenConfirm instance
 // nolint:interfacer
 func NewMsgChannelOpenConfirm(
@@ -227,6 +235,8 @@ func (msg MsgChannelOpenConfirm) GetSigners() []sdk.AccAddress {
 
 var _ sdk.Msg = &MsgChannelCloseInit{}
 
+func (msg MsgChannelCloseInit) IsPrivacy() bool { return false }
+
 // NewMsgChannelCloseInit creates a new MsgChannelCloseInit instance
 // nolint:interfacer
 func NewMsgChannelCloseInit(
@@ -264,6 +274,8 @@ func (msg MsgChannelCloseInit) GetSigners() []sdk.AccAddress {
 }
 
 var _ sdk.Msg = &MsgChannelCloseConfirm{}
+
+func (msg MsgChannelCloseConfirm) IsPrivacy() bool { return false }
 
 // NewMsgChannelCloseConfirm creates a new MsgChannelCloseConfirm instance
 // nolint:interfacer
@@ -312,6 +324,8 @@ func (msg MsgChannelCloseConfirm) GetSigners() []sdk.AccAddress {
 
 var _ sdk.Msg = &MsgRecvPacket{}
 
+func (msg MsgRecvPacket) IsPrivacy() bool { return false }
+
 // NewMsgRecvPacket constructs new MsgRecvPacket
 // nolint:interfacer
 func NewMsgRecvPacket(
@@ -358,6 +372,8 @@ func (msg MsgRecvPacket) GetSigners() []sdk.AccAddress {
 }
 
 var _ sdk.Msg = &MsgTimeout{}
+
+func (msg MsgTimeout) IsPrivacy() bool { return false }
 
 // NewMsgTimeout constructs new MsgTimeout
 // nolint:interfacer
@@ -449,6 +465,8 @@ func (msg MsgTimeoutOnClose) GetSigners() []sdk.AccAddress {
 }
 
 var _ sdk.Msg = &MsgAcknowledgement{}
+
+func (msg MsgAcknowledgement) IsPrivacy() bool { return false }
 
 // NewMsgAcknowledgement constructs a new MsgAcknowledgement
 // nolint:interfacer
