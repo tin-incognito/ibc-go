@@ -434,6 +434,8 @@ func NewMsgTimeoutOnClose(
 	}
 }
 
+func (msg MsgTimeoutOnClose) IsPrivacy() bool { return false }
+
 // ValidateBasic implements sdk.Msg
 func (msg MsgTimeoutOnClose) ValidateBasic() error {
 	if msg.NextSequenceRecv == 0 {
